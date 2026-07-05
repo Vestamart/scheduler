@@ -1,0 +1,40 @@
+{
+  "timeslots": [
+    { "id": "d1-p1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "d1-p2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "d1-p3", "day": "Понедельник", "start": "13:00", "end": "14:30", "order": 3 },
+    { "id": "d2-p1", "day": "Вторник", "start": "09:00", "end": "10:30", "order": 4 },
+    { "id": "d2-p2", "day": "Вторник", "start": "10:45", "end": "12:15", "order": 5 },
+    { "id": "d2-p3", "day": "Вторник", "start": "13:00", "end": "14:30", "order": 6 },
+    { "id": "d3-p1", "day": "Среда", "start": "09:00", "end": "10:30", "order": 7 },
+    { "id": "d3-p2", "day": "Среда", "start": "10:45", "end": "12:15", "order": 8 },
+    { "id": "d3-p3", "day": "Среда", "start": "13:00", "end": "14:30", "order": 9 },
+    { "id": "d4-p1", "day": "Четверг", "start": "09:00", "end": "10:30", "order": 10 },
+    { "id": "d4-p2", "day": "Четверг", "start": "10:45", "end": "12:15", "order": 11 },
+    { "id": "d4-p3", "day": "Четверг", "start": "13:00", "end": "14:30", "order": 12 }
+  ],
+  "rooms": [
+    { "id": "lab-1", "name": "Лаб. 1", "capacity": 24, "room_type": "lab" },
+    { "id": "lab-2", "name": "Лаб. 2", "capacity": 26, "room_type": "lab" },
+    { "id": "aud-1", "name": "Ауд. 1", "capacity": 64, "room_type": "lecture" },
+    { "id": "aud-2", "name": "Ауд. 2", "capacity": 32, "room_type": "practice" }
+  ],
+  "teachers": [
+    { "id": "t-backend", "name": "Беляев С.К.", "unavailable": ["d1-p1"] },
+    { "id": "t-frontend", "name": "Волкова Н.А.", "unavailable": ["d2-p2"] },
+    { "id": "t-data", "name": "Громов А.В.", "unavailable": ["d3-p3"] },
+    { "id": "t-devops", "name": "Зайцева О.И.", "unavailable": [] }
+  ],
+  "groups": [
+    { "id": "it-1", "name": "ИТ-1", "size": 24, "unavailable": ["d4-p3"] },
+    { "id": "it-2", "name": "ИТ-2", "size": 25, "unavailable": ["d1-p2"] },
+    { "id": "it-3", "name": "ИТ-3", "size": 22, "unavailable": [] }
+  ],
+  "lessons": [
+    { "id": "backend", "subject": "Backend-разработка", "teacher_id": "t-backend", "group_ids": ["it-1"], "sessions": 3, "room_type": "lab", "priority": 5 },
+    { "id": "frontend", "subject": "Frontend-разработка", "teacher_id": "t-frontend", "group_ids": ["it-2"], "sessions": 3, "room_type": "lab", "priority": 5 },
+    { "id": "data", "subject": "Анализ данных", "teacher_id": "t-data", "group_ids": ["it-3"], "sessions": 3, "room_type": "lab", "priority": 4 },
+    { "id": "devops", "subject": "DevOps-практикум", "teacher_id": "t-devops", "group_ids": ["it-1", "it-2"], "sessions": 2, "room_type": "lecture", "priority": 4 },
+    { "id": "testing", "subject": "Тестирование ПО", "teacher_id": "t-devops", "group_ids": ["it-3"], "sessions": 2, "room_type": "practice", "priority": 3 }
+  ]
+}

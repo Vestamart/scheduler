@@ -1,0 +1,5 @@
+.git
+tmp
+metrics
+*.test
+coverage.out

@@ -1,0 +1,53 @@
+{
+  "timeslots": [
+    { "id": "d1-p1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "d1-p2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "d1-p3", "day": "Понедельник", "start": "13:00", "end": "14:30", "order": 3 },
+    { "id": "d2-p1", "day": "Вторник", "start": "09:00", "end": "10:30", "order": 4 },
+    { "id": "d2-p2", "day": "Вторник", "start": "10:45", "end": "12:15", "order": 5 },
+    { "id": "d2-p3", "day": "Вторник", "start": "13:00", "end": "14:30", "order": 6 },
+    { "id": "d3-p1", "day": "Среда", "start": "09:00", "end": "10:30", "order": 7 },
+    { "id": "d3-p2", "day": "Среда", "start": "10:45", "end": "12:15", "order": 8 },
+    { "id": "d3-p3", "day": "Среда", "start": "13:00", "end": "14:30", "order": 9 },
+    { "id": "d4-p1", "day": "Четверг", "start": "09:00", "end": "10:30", "order": 10 },
+    { "id": "d4-p2", "day": "Четверг", "start": "10:45", "end": "12:15", "order": 11 },
+    { "id": "d4-p3", "day": "Четверг", "start": "13:00", "end": "14:30", "order": 12 },
+    { "id": "d5-p1", "day": "Пятница", "start": "09:00", "end": "10:30", "order": 13 },
+    { "id": "d5-p2", "day": "Пятница", "start": "10:45", "end": "12:15", "order": 14 },
+    { "id": "d5-p3", "day": "Пятница", "start": "13:00", "end": "14:30", "order": 15 }
+  ],
+  "rooms": [
+    { "id": "aud-101", "name": "Ауд. 101", "capacity": 120, "room_type": "lecture" },
+    { "id": "aud-205", "name": "Ауд. 205", "capacity": 42, "room_type": "practice" },
+    { "id": "aud-320", "name": "Ауд. 320", "capacity": 36, "room_type": "practice" },
+    { "id": "lab-310", "name": "Лаб. 310", "capacity": 28, "room_type": "lab" },
+    { "id": "lab-411", "name": "Лаб. 411", "capacity": 30, "room_type": "lab" },
+    { "id": "aud-420", "name": "Ауд. 420", "capacity": 70, "room_type": "any" }
+  ],
+  "teachers": [
+    { "id": "t-ivanov", "name": "Иванов И.И.", "unavailable": ["d1-p1", "d5-p3"] },
+    { "id": "t-petrova", "name": "Петрова А.С.", "unavailable": ["d3-p2"] },
+    { "id": "t-sidorov", "name": "Сидоров П.П.", "unavailable": ["d2-p3"] },
+    { "id": "t-kuznetsova", "name": "Кузнецова Е.В.", "unavailable": ["d4-p1"] },
+    { "id": "t-smirnov", "name": "Смирнов Д.А.", "unavailable": [] },
+    { "id": "t-orlova", "name": "Орлова М.Н.", "unavailable": ["d1-p3", "d5-p1"] }
+  ],
+  "groups": [
+    { "id": "pi-101", "name": "ПИ-101", "size": 28, "unavailable": ["d5-p3"] },
+    { "id": "pi-102", "name": "ПИ-102", "size": 26, "unavailable": ["d1-p1"] },
+    { "id": "pi-201", "name": "ПИ-201", "size": 22, "unavailable": ["d3-p3"] },
+    { "id": "pi-202", "name": "ПИ-202", "size": 24, "unavailable": ["d2-p1"] }
+  ],
+  "lessons": [
+    { "id": "algorithms", "subject": "Алгоритмы и структуры данных", "teacher_id": "t-ivanov", "group_ids": ["pi-101", "pi-102"], "sessions": 2, "room_type": "lecture", "priority": 5 },
+    { "id": "databases", "subject": "Базы данных", "teacher_id": "t-petrova", "group_ids": ["pi-101"], "sessions": 2, "room_type": "lab", "priority": 4 },
+    { "id": "web", "subject": "Веб-программирование", "teacher_id": "t-sidorov", "group_ids": ["pi-102"], "sessions": 2, "room_type": "lab", "priority": 4 },
+    { "id": "math", "subject": "Дискретная математика", "teacher_id": "t-smirnov", "group_ids": ["pi-101", "pi-102"], "sessions": 2, "room_type": "practice", "priority": 4 },
+    { "id": "networks", "subject": "Компьютерные сети", "teacher_id": "t-kuznetsova", "group_ids": ["pi-201"], "sessions": 2, "room_type": "lab", "priority": 3 },
+    { "id": "economics", "subject": "Экономика ИТ-проектов", "teacher_id": "t-smirnov", "group_ids": ["pi-101", "pi-102", "pi-201"], "sessions": 1, "room_type": "lecture", "priority": 3 },
+    { "id": "project", "subject": "Проектный практикум", "teacher_id": "t-sidorov", "group_ids": ["pi-102", "pi-201"], "sessions": 1, "room_type": "practice", "priority": 5 },
+    { "id": "ai", "subject": "Основы искусственного интеллекта", "teacher_id": "t-ivanov", "group_ids": ["pi-201"], "sessions": 2, "room_type": "lab", "priority": 3 },
+    { "id": "security", "subject": "Информационная безопасность", "teacher_id": "t-orlova", "group_ids": ["pi-202"], "sessions": 2, "room_type": "practice", "priority": 4 },
+    { "id": "architecture", "subject": "Архитектура ИС", "teacher_id": "t-kuznetsova", "group_ids": ["pi-201", "pi-202"], "sessions": 1, "room_type": "lecture", "priority": 3 }
+  ]
+}

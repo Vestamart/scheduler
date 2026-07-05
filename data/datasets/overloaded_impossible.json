@@ -1,0 +1,27 @@
+{
+  "timeslots": [
+    { "id": "d1-p1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "d1-p2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "d2-p1", "day": "Вторник", "start": "09:00", "end": "10:30", "order": 3 },
+    { "id": "d2-p2", "day": "Вторник", "start": "10:45", "end": "12:15", "order": 4 }
+  ],
+  "rooms": [
+    { "id": "lab-1", "name": "Лаб. 1", "capacity": 24, "room_type": "lab" },
+    { "id": "aud-1", "name": "Ауд. 1", "capacity": 64, "room_type": "lecture" }
+  ],
+  "teachers": [
+    { "id": "t-lab", "name": "Лаборантов В.В.", "unavailable": [] },
+    { "id": "t-lecture", "name": "Лекторова А.А.", "unavailable": [] },
+    { "id": "t-practice", "name": "Практиков С.С.", "unavailable": [] }
+  ],
+  "groups": [
+    { "id": "g-1", "name": "Г-1", "size": 24, "unavailable": [] },
+    { "id": "g-2", "name": "Г-2", "size": 24, "unavailable": [] }
+  ],
+  "lessons": [
+    { "id": "lab-1", "subject": "Лабораторная 1", "teacher_id": "t-lab", "group_ids": ["g-1"], "sessions": 3, "room_type": "lab", "priority": 5 },
+    { "id": "lab-2", "subject": "Лабораторная 2", "teacher_id": "t-lab", "group_ids": ["g-2"], "sessions": 3, "room_type": "lab", "priority": 5 },
+    { "id": "lecture", "subject": "Потоковая лекция", "teacher_id": "t-lecture", "group_ids": ["g-1", "g-2"], "sessions": 2, "room_type": "lecture", "priority": 4 },
+    { "id": "practice-without-room", "subject": "Практика без подходящей аудитории", "teacher_id": "t-practice", "group_ids": ["g-1"], "sessions": 2, "room_type": "practice", "priority": 3 }
+  ]
+}

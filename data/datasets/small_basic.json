@@ -1,0 +1,29 @@
+{
+  "timeslots": [
+    { "id": "d1-p1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "d1-p2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "d2-p1", "day": "Вторник", "start": "09:00", "end": "10:30", "order": 3 },
+    { "id": "d2-p2", "day": "Вторник", "start": "10:45", "end": "12:15", "order": 4 },
+    { "id": "d3-p1", "day": "Среда", "start": "09:00", "end": "10:30", "order": 5 },
+    { "id": "d3-p2", "day": "Среда", "start": "10:45", "end": "12:15", "order": 6 }
+  ],
+  "rooms": [
+    { "id": "aud-101", "name": "Ауд. 101", "capacity": 60, "room_type": "lecture" },
+    { "id": "aud-204", "name": "Ауд. 204", "capacity": 30, "room_type": "practice" },
+    { "id": "lab-301", "name": "Лаб. 301", "capacity": 24, "room_type": "lab" }
+  ],
+  "teachers": [
+    { "id": "t-ivanov", "name": "Иванов И.И.", "unavailable": ["d1-p1"] },
+    { "id": "t-petrova", "name": "Петрова А.С.", "unavailable": [] },
+    { "id": "t-sidorov", "name": "Сидоров П.П.", "unavailable": ["d3-p2"] }
+  ],
+  "groups": [
+    { "id": "pi-101", "name": "ПИ-101", "size": 24, "unavailable": [] },
+    { "id": "pi-102", "name": "ПИ-102", "size": 22, "unavailable": ["d2-p2"] }
+  ],
+  "lessons": [
+    { "id": "math", "subject": "Дискретная математика", "teacher_id": "t-ivanov", "group_ids": ["pi-101"], "sessions": 2, "room_type": "practice", "priority": 4 },
+    { "id": "programming", "subject": "Программирование", "teacher_id": "t-petrova", "group_ids": ["pi-102"], "sessions": 2, "room_type": "lab", "priority": 5 },
+    { "id": "intro", "subject": "Введение в ИТ", "teacher_id": "t-sidorov", "group_ids": ["pi-101", "pi-102"], "sessions": 1, "room_type": "lecture", "priority": 3 }
+  ]
+}

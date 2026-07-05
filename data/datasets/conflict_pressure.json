@@ -1,0 +1,21 @@
+{
+  "timeslots": [
+    { "id": "mon-1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "mon-2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "mon-3", "day": "Понедельник", "start": "13:00", "end": "14:30", "order": 3 }
+  ],
+  "rooms": [
+    { "id": "room-101", "name": "Ауд. 101", "capacity": 30, "room_type": "practice" }
+  ],
+  "teachers": [
+    { "id": "teacher-main", "name": "Один преподаватель", "unavailable": [] }
+  ],
+  "groups": [
+    { "id": "group-main", "name": "Одна группа", "size": 25, "unavailable": [] }
+  ],
+  "lessons": [
+    { "id": "math", "subject": "Математика", "teacher_id": "teacher-main", "group_ids": ["group-main"], "sessions": 2, "room_type": "practice", "priority": 5 },
+    { "id": "physics", "subject": "Физика", "teacher_id": "teacher-main", "group_ids": ["group-main"], "sessions": 2, "room_type": "practice", "priority": 5 },
+    { "id": "programming", "subject": "Программирование", "teacher_id": "teacher-main", "group_ids": ["group-main"], "sessions": 2, "room_type": "practice", "priority": 4 }
+  ]
+}

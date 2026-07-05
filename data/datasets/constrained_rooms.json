@@ -1,0 +1,35 @@
+{
+  "timeslots": [
+    { "id": "d1-p1", "day": "Понедельник", "start": "09:00", "end": "10:30", "order": 1 },
+    { "id": "d1-p2", "day": "Понедельник", "start": "10:45", "end": "12:15", "order": 2 },
+    { "id": "d2-p1", "day": "Вторник", "start": "09:00", "end": "10:30", "order": 3 },
+    { "id": "d2-p2", "day": "Вторник", "start": "10:45", "end": "12:15", "order": 4 },
+    { "id": "d3-p1", "day": "Среда", "start": "09:00", "end": "10:30", "order": 5 },
+    { "id": "d3-p2", "day": "Среда", "start": "10:45", "end": "12:15", "order": 6 },
+    { "id": "d4-p1", "day": "Четверг", "start": "09:00", "end": "10:30", "order": 7 },
+    { "id": "d4-p2", "day": "Четверг", "start": "10:45", "end": "12:15", "order": 8 }
+  ],
+  "rooms": [
+    { "id": "lecture-big", "name": "Большая лекционная", "capacity": 90, "room_type": "lecture" },
+    { "id": "practice-small", "name": "Практическая малая", "capacity": 28, "room_type": "practice" },
+    { "id": "lab-only", "name": "Единственная лаборатория", "capacity": 24, "room_type": "lab" }
+  ],
+  "teachers": [
+    { "id": "t-1", "name": "Антонов Р.В.", "unavailable": ["d1-p1", "d4-p2"] },
+    { "id": "t-2", "name": "Борисова М.И.", "unavailable": ["d2-p1"] },
+    { "id": "t-3", "name": "Васильев П.С.", "unavailable": ["d3-p2"] },
+    { "id": "t-4", "name": "Демидова Е.К.", "unavailable": ["d1-p2", "d4-p1"] }
+  ],
+  "groups": [
+    { "id": "g-1", "name": "Г-1", "size": 24, "unavailable": ["d2-p2"] },
+    { "id": "g-2", "name": "Г-2", "size": 23, "unavailable": ["d3-p1"] },
+    { "id": "g-3", "name": "Г-3", "size": 21, "unavailable": [] }
+  ],
+  "lessons": [
+    { "id": "lecture-common", "subject": "Общая лекция", "teacher_id": "t-1", "group_ids": ["g-1", "g-2", "g-3"], "sessions": 2, "room_type": "lecture", "priority": 5 },
+    { "id": "lab-a", "subject": "Лабораторная A", "teacher_id": "t-2", "group_ids": ["g-1"], "sessions": 3, "room_type": "lab", "priority": 5 },
+    { "id": "lab-b", "subject": "Лабораторная B", "teacher_id": "t-3", "group_ids": ["g-2"], "sessions": 3, "room_type": "lab", "priority": 4 },
+    { "id": "practice-a", "subject": "Практика A", "teacher_id": "t-4", "group_ids": ["g-3"], "sessions": 3, "room_type": "practice", "priority": 3 },
+    { "id": "practice-b", "subject": "Практика B", "teacher_id": "t-1", "group_ids": ["g-1"], "sessions": 2, "room_type": "practice", "priority": 3 }
+  ]
+}
